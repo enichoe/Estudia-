@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Estudia+ es tu organizador personal de cursos, tareas, horarios y objetivos de estudio.">
+  <meta name="theme-color" content="#07111f">
+  <title>Estudia+ — Organiza. Aprende. Avanza.</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <svg class="svg-sprite" aria-hidden="true">
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M16 3v4M8 3v4M3 10h18"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5z"/><path d="M4 6.5v13A2.5 2.5 0 0 0 6.5 22H20"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="m8 12 2.5 2.5L16 9"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></symbol>
+    <symbol id="i-settings" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-2.83 2.83-.06-.06A1.7 1.7 0 0 0 15 19.4a1.7 1.7 0 0 0-1 .6 1.7 1.7 0 0 0-.4 1.1V21h-4v-.09A1.7 1.7 0 0 0 8.55 19.4a1.7 1.7 0 0 0-1.88.34l-.06.06-2.83-2.83.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-.6-1 1.7 1.7 0 0 0-1.1-.4H3v-4h.09A1.7 1.7 0 0 0 4.6 8.55a1.7 1.7 0 0 0-.34-1.88l-.06-.06 2.83-2.83.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-.6 1.7 1.7 0 0 0 .4-1.1V3h4v.09A1.7 1.7 0 0 0 15.45 4.6a1.7 1.7 0 0 0 1.88-.34l.06-.06 2.83 2.83-.06.06A1.7 1.7 0 0 0 19.4 9c.13.37.34.71.6 1 .3.25.68.4 1.1.4h.09v4h-.09a1.7 1.7 0 0 0-1.7.6Z"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+    <symbol id="i-edit" viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L8 18l-4 1 1-4Z"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18M8 6V4h8v2M19 6l-1 15H6L5 6M10 11v5M14 11v5"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 21h14"/></symbol>
+    <symbol id="i-upload" viewBox="0 0 24 24"><path d="M12 16V4m0 0 4 4m-4-4-4 4M5 21h14"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M10.3 3.7 2.6 17a2 2 0 0 0 1.7 3h15.4a2 2 0 0 0 1.7-3L13.7 3.7a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4M12 17h.01"/></symbol>
+  </svg>
+
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Navegación principal">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true"><span>🎓</span></div>
+        <div><div class="brand-name">Estudia<span>+</span></div><p>Organiza. Aprende. Avanza.</p></div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <p class="nav-label">Tu espacio</p>
+        <button class="nav-item active" data-view="dashboard"><svg><use href="#i-grid"></use></svg><span>Dashboard</span></button>
+        <button class="nav-item" data-view="my-day"><svg><use href="#i-sun"></use></svg><span>Mi día</span><b class="nav-badge" id="today-badge">0</b></button>
+        <button class="nav-item" data-view="courses"><svg><use href="#i-book"></use></svg><span>Mis cursos</span></button>
+        <button class="nav-item" data-view="tasks"><svg><use href="#i-check"></use></svg><span>Mis tareas</span><b class="nav-badge" id="pending-badge">0</b></button>
+        <button class="nav-item" data-view="calendar"><svg><use href="#i-calendar"></use></svg><span>Calendario</span></button>
+        <button class="nav-item" data-view="statistics"><svg><use href="#i-chart"></use></svg><span>Estadísticas</span></button>
+        <p class="nav-label nav-label-spaced">Preferencias</p>
+        <button class="nav-item" data-view="settings"><svg><use href="#i-settings"></use></svg><span>Configuración</span></button>
+        <button class="nav-item support-nav" data-support><svg><use href="#i-heart"></use></svg><span>Apoyar Estudia+</span></button>
+      </nav>
+
+      <div class="sidebar-focus">
+        <div class="focus-ring"><span id="sidebar-progress">0%</span></div>
+        <div><strong>Meta semanal</strong><small id="sidebar-goal">0 de 0 tareas</small></div>
+      </div>
+    </aside>
+    <button class="sidebar-overlay" id="sidebar-overlay" aria-label="Cerrar menú"></button>
+
+    <div class="main-column">
+      <header class="topbar">
+        <button class="icon-btn mobile-menu" id="menu-toggle" aria-label="Abrir menú" title="Abrir menú"><svg><use href="#i-menu"></use></svg></button>
+        <div class="page-heading"><p id="page-eyebrow">Tu espacio de estudio</p><h1 id="page-title">Dashboard</h1></div>
+        <div class="top-actions">
+          <button class="icon-btn notification-btn" id="notifications-btn" aria-label="Ver recordatorios" title="Ver recordatorios"><svg><use href="#i-bell"></use></svg><span id="notification-dot"></span></button>
+          <button class="icon-btn" id="quick-theme" aria-label="Cambiar tema" title="Cambiar tema"><svg><use href="#i-sun"></use></svg></button>
+          <button class="btn btn-primary" id="quick-task"><svg><use href="#i-plus"></use></svg><span>Nueva tarea</span></button>
+        </div>
+      </header>
+
+      <main class="content" id="main-content">
+        <section class="view active" id="view-dashboard" data-title="Dashboard" data-eyebrow="Tu espacio de estudio">
+          <div class="welcome-panel">
+            <div class="welcome-copy"><p class="date-chip" id="current-date">Hoy</p><h2 id="welcome-title">¡Hola!</h2><p id="welcome-message">Cada tarea completada te acerca a tu meta.</p></div>
+            <div class="daily-score"><span>Ritmo de hoy</span><strong id="daily-score">0%</strong><div class="mini-progress"><i id="daily-score-bar"></i></div></div>
+          </div>
+
+          <div class="metric-grid" id="dashboard-metrics"></div>
+
+          <div class="dashboard-grid">
+            <article class="panel panel-wide">
+              <div class="panel-header"><div><p class="eyebrow">En agenda</p><h3>Próximas actividades</h3></div><button class="text-btn" data-go="tasks">Ver todas <svg><use href="#i-arrow"></use></svg></button></div>
+              <div class="upcoming-list" id="upcoming-list"></div>
+            </article>
+            <article class="panel progress-panel">
+              <div class="panel-header"><div><p class="eyebrow">Esta semana</p><h3>Tu progreso</h3></div></div>
+              <div class="progress-orbit" id="weekly-orbit"><div><strong id="weekly-progress-value">0%</strong><span>completado</span></div></div>
+              <div class="progress-details" id="weekly-progress-details"></div>
+            </article>
+            <article class="panel">
+              <div class="panel-header"><div><p class="eyebrow">Plan de hoy</p><h3>Horario</h3></div><button class="icon-btn compact" id="dashboard-add-activity" title="Agregar actividad"><svg><use href="#i-plus"></use></svg></button></div>
+              <div class="today-mini-timeline" id="today-mini-timeline"></div>
+            </article>
+            <article class="panel reminders-panel">
+              <div class="panel-header"><div><p class="eyebrow">Atención</p><h3>Recordatorios</h3></div><span class="count-pill" id="reminders-count">0</span></div>
+              <div id="reminders-list"></div>
+            </article>
+          </div>
+        </section>
+
+        <section class="view" id="view-my-day" data-title="Mi día" data-eyebrow="Organiza tu jornada">
+          <div class="section-lead"><div><p class="date-chip" id="my-day-date">Hoy</p><h2>Tu ruta para hoy</h2><p>Organiza las actividades por hora y mantén el foco.</p></div><button class="btn btn-primary" id="add-activity"><svg><use href="#i-plus"></use></svg>Nueva actividad</button></div>
+          <div class="day-summary" id="day-summary"></div>
+          <div class="timeline panel" id="day-timeline"></div>
+        </section>
+
+        <section class="view" id="view-courses" data-title="Mis cursos" data-eyebrow="Tu avance académico">
+          <div class="section-lead"><div><p class="eyebrow">Aprendizaje organizado</p><h2>Todos tus cursos</h2><p>Consulta docentes, horarios, tareas y progreso en un solo lugar.</p></div><button class="btn btn-primary" id="add-course"><svg><use href="#i-plus"></use></svg>Agregar curso</button></div>
+          <div class="course-overview" id="course-overview"></div>
+          <div class="courses-grid" id="courses-grid"></div>
+        </section>
+
+        <section class="view" id="view-tasks" data-title="Mis tareas" data-eyebrow="Convierte pendientes en progreso">
+          <div class="section-lead"><div><p class="eyebrow">Gestión de entregas</p><h2>Tareas y evaluaciones</h2><p>Prioriza lo importante y entrega a tiempo.</p></div><button class="btn btn-primary" id="add-task"><svg><use href="#i-plus"></use></svg>Nueva tarea</button></div>
+          <div class="task-toolbar panel">
+            <label class="search-field"><svg><use href="#i-search"></use></svg><input type="search" id="task-search" placeholder="Buscar por título o descripción" aria-label="Buscar tareas"></label>
+            <select id="task-course-filter" aria-label="Filtrar por curso"><option value="">Todos los cursos</option></select>
+            <select id="task-priority-filter" aria-label="Filtrar por prioridad"><option value="">Toda prioridad</option><option value="high">Alta</option><option value="medium">Media</option><option value="low">Baja</option></select>
+            <select id="task-status-filter" aria-label="Filtrar por estado"><option value="">Todo estado</option><option value="pending">Pendiente</option><option value="progress">En progreso</option><option value="completed">Completado</option></select>
+            <select id="task-sort" aria-label="Ordenar tareas"><option value="due-asc">Fecha: más próxima</option><option value="due-desc">Fecha: más lejana</option><option value="priority">Prioridad</option><option value="created">Más recientes</option></select>
+          </div>
+          <div class="task-results-meta" id="task-results-meta"></div>
+          <div class="task-list" id="task-list"></div>
+        </section>
+
+        <section class="view" id="view-calendar" data-title="Calendario" data-eyebrow="Visualiza todo tu mes">
+          <div class="section-lead calendar-lead"><div><p class="eyebrow">Agenda académica</p><h2>Calendario de estudio</h2><p>Tareas, entregas, exámenes y actividades en contexto.</p></div><button class="btn btn-primary" id="calendar-add"><svg><use href="#i-plus"></use></svg>Agregar actividad</button></div>
+          <div class="calendar-toolbar panel">
+            <div class="segmented"><button class="active" data-calendar-view="month">Mes</button><button data-calendar-view="week">Semana</button></div>
+            <div class="calendar-nav"><button class="icon-btn compact" id="calendar-prev" aria-label="Periodo anterior">‹</button><h3 id="calendar-period">Mes</h3><button class="icon-btn compact" id="calendar-next" aria-label="Periodo siguiente">›</button><button class="btn btn-secondary small" id="calendar-today">Hoy</button></div>
+          </div>
+          <div class="calendar-layout">
+            <div class="calendar-board panel"><div class="calendar-weekdays" id="calendar-weekdays"></div><div class="calendar-grid" id="calendar-grid"></div></div>
+            <aside class="panel date-agenda"><div class="panel-header"><div><p class="eyebrow">Fecha seleccionada</p><h3 id="agenda-date">Hoy</h3></div></div><div id="agenda-list"></div><button class="btn btn-secondary full" id="agenda-add"><svg><use href="#i-plus"></use></svg>Agregar en esta fecha</button></aside>
+          </div>
+        </section>
+
+        <section class="view" id="view-statistics" data-title="Estadísticas" data-eyebrow="Entiende tu progreso">
+          <div class="section-lead"><div><p class="eyebrow">Tu rendimiento</p><h2>Estadísticas de estudio</h2><p>Descubre cómo distribuyes tu esfuerzo y dónde puedes mejorar.</p></div><div class="period-chip">Últimos 7 días</div></div>
+          <div class="stats-metrics" id="stats-metrics"></div>
+          <div class="stats-grid">
+            <article class="panel"><div class="panel-header"><div><p class="eyebrow">Ritmo semanal</p><h3>Tareas completadas por día</h3></div></div><div class="bar-chart" id="weekly-chart"></div></article>
+            <article class="panel"><div class="panel-header"><div><p class="eyebrow">Resultados</p><h3>Productividad general</h3></div></div><div id="productivity-chart"></div></article>
+            <article class="panel panel-wide"><div class="panel-header"><div><p class="eyebrow">Distribución</p><h3>Horas dedicadas por curso</h3></div></div><div class="course-hours" id="course-hours"></div></article>
+            <article class="panel"><div class="panel-header"><div><p class="eyebrow">Constancia</p><h3>Días más productivos</h3></div></div><div id="productive-days"></div></article>
+          </div>
+        </section>
+
+        <section class="view" id="view-settings" data-title="Configuración" data-eyebrow="Personaliza Estudia+">
+          <div class="section-lead"><div><p class="eyebrow">Tu experiencia</p><h2>Configuración</h2><p>Ajusta la aplicación y administra tus datos.</p></div></div>
+          <div class="settings-grid">
+            <form class="panel settings-card" id="profile-form"><div class="setting-icon"><svg><use href="#i-target"></use></svg></div><div><h3>Perfil</h3><p>Este nombre aparecerá en tu saludo diario.</p><label>Tu nombre<input type="text" id="settings-name" maxlength="40" required></label><button class="btn btn-primary" type="submit">Guardar nombre</button></div></form>
+            <article class="panel settings-card"><div class="setting-icon"><svg><use href="#i-sun"></use></svg></div><div><h3>Apariencia</h3><p>Elige el tema que te resulte más cómodo.</p><div class="theme-options"><button class="theme-choice" data-theme-choice="dark"><span class="theme-preview dark-preview"></span><b>Oscuro</b></button><button class="theme-choice" data-theme-choice="light"><span class="theme-preview light-preview"></span><b>Claro</b></button></div></div></article>
+            <article class="panel settings-card"><div class="setting-icon"><svg><use href="#i-book"></use></svg></div><div><h3>Administrar cursos</h3><p>Agrega, actualiza o elimina tus asignaturas.</p><button class="btn btn-secondary" data-go="courses">Ir a mis cursos</button></div></article>
+            <article class="panel settings-card"><div class="setting-icon"><svg><use href="#i-download"></use></svg></div><div><h3>Copia de seguridad</h3><p>Exporta todos tus datos o restaura un archivo anterior.</p><div class="button-row"><button class="btn btn-secondary" id="export-data"><svg><use href="#i-download"></use></svg>Exportar</button><button class="btn btn-secondary" id="import-data"><svg><use href="#i-upload"></use></svg>Importar</button><input type="file" id="import-file" accept="application/json" hidden></div></div></article>
+            <article class="panel settings-card"><div class="setting-icon heart-icon"><svg><use href="#i-heart"></use></svg></div><div><h3>Apoyar Estudia+</h3><p>Tu apoyo ayuda a seguir mejorando esta herramienta.</p><button class="btn btn-support" data-support><svg><use href="#i-heart"></use></svg>Apoyar con Yape</button></div></article>
+            <article class="panel settings-card danger-card"><div class="setting-icon danger-icon"><svg><use href="#i-trash"></use></svg></div><div><h3>Eliminar todos los datos</h3><p>Restablece Estudia+ a su estado inicial. Esta acción no se puede deshacer.</p><button class="btn btn-danger" id="clear-data"><svg><use href="#i-trash"></use></svg>Eliminar datos</button></div></article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="app-footer"><p>© 2026 Estudia+ — Creado por Ernesto Nicho 17</p><button class="footer-support" data-support><svg><use href="#i-heart"></use></svg>Apoyar Estudia+</button></footer>
+    </div>
+  </div>
+
+  <dialog class="modal" id="course-modal">
+    <form method="dialog" class="modal-card" id="course-form">
+      <div class="modal-header"><div><p class="eyebrow">Asignatura</p><h2 id="course-modal-title">Agregar curso</h2></div><button class="modal-close" value="cancel" aria-label="Cerrar">×</button></div>
+      <div class="form-grid"><label class="full">Nombre del curso<input id="course-name" name="name" maxlength="70" required></label><label>Docente<input id="course-teacher" name="teacher" maxlength="60" placeholder="Nombre del docente"></label><label>Horario<input id="course-schedule" name="schedule" maxlength="80" placeholder="Ej. Lun 18:30 – 20:00"></label><label>Color del curso<div class="color-field"><input type="color" id="course-color" name="color" value="#31d0aa"><span id="course-color-code">#31D0AA</span></div></label><label>Horas meta por semana<input type="number" id="course-weekly-hours" name="hours" min="1" max="30" value="3"></label><label class="full">Descripción<textarea id="course-description" name="description" rows="3" maxlength="240" placeholder="Objetivos o contenidos principales"></textarea></label></div>
+      <input type="hidden" id="course-id"><div class="modal-actions"><button class="btn btn-secondary" value="cancel" type="button" data-close-modal>Cancelar</button><button class="btn btn-primary" type="submit">Guardar curso</button></div>
+    </form>
+  </dialog>
+
+  <dialog class="modal" id="task-modal">
+    <form method="dialog" class="modal-card modal-card-wide" id="task-form">
+      <div class="modal-header"><div><p class="eyebrow">Pendiente académico</p><h2 id="task-modal-title">Nueva tarea</h2></div><button class="modal-close" value="cancel" aria-label="Cerrar">×</button></div>
+      <div class="form-grid"><label class="full">Título<input id="task-title" maxlength="100" required placeholder="Ej. Entregar práctica de redes"></label><label>Curso<select id="task-course"><option value="">Sin curso</option></select></label><label>Tipo<select id="task-type"><option value="task">Tarea</option><option value="delivery">Entrega</option><option value="exam">Examen</option><option value="event">Evento</option></select></label><label>Fecha límite<input type="date" id="task-due-date" required></label><label>Hora límite<input type="time" id="task-due-time" value="23:59"></label><label>Prioridad<select id="task-priority"><option value="high">Alta</option><option value="medium" selected>Media</option><option value="low">Baja</option></select></label><label>Estado<select id="task-status"><option value="pending">Pendiente</option><option value="progress">En progreso</option><option value="completed">Completado</option></select></label><label class="full">Descripción<textarea id="task-description" rows="3" maxlength="400" placeholder="Indicaciones, materiales o notas importantes"></textarea></label></div>
+      <input type="hidden" id="task-id"><div class="modal-actions"><button class="btn btn-secondary" value="cancel" type="button" data-close-modal>Cancelar</button><button class="btn btn-primary" type="submit">Guardar tarea</button></div>
+    </form>
+  </dialog>
+
+  <dialog class="modal" id="activity-modal">
+    <form method="dialog" class="modal-card modal-card-wide" id="activity-form">
+      <div class="modal-header"><div><p class="eyebrow">Agenda diaria</p><h2 id="activity-modal-title">Nueva actividad</h2></div><button class="modal-close" value="cancel" aria-label="Cerrar">×</button></div>
+      <div class="form-grid"><label class="full">Título<input id="activity-title" maxlength="100" required placeholder="Ej. Repasar apuntes de programación"></label><label>Fecha<input type="date" id="activity-date" required></label><label>Hora<input type="time" id="activity-time" required value="18:00"></label><label>Curso<select id="activity-course"><option value="">Sin curso</option></select></label><label>Duración estimada<select id="activity-duration"><option value="0.5">30 minutos</option><option value="1" selected>1 hora</option><option value="1.5">1 hora 30 min</option><option value="2">2 horas</option><option value="3">3 horas</option></select></label><label>Prioridad<select id="activity-priority"><option value="high">Alta</option><option value="medium" selected>Media</option><option value="low">Baja</option></select></label><label>Estado<select id="activity-status"><option value="pending">Pendiente</option><option value="progress">En progreso</option><option value="completed">Completado</option></select></label><label class="full">Descripción opcional<textarea id="activity-description" rows="3" maxlength="300" placeholder="Añade una nota breve"></textarea></label></div>
+      <input type="hidden" id="activity-id"><div class="modal-actions"><button class="btn btn-secondary" value="cancel" type="button" data-close-modal>Cancelar</button><button class="btn btn-primary" type="submit">Guardar actividad</button></div>
+    </form>
+  </dialog>
+
+  <dialog class="modal support-modal" id="support-modal">
+    <div class="modal-card support-card">
+      <button class="modal-close support-close" data-close-modal aria-label="Cerrar">×</button>
+      <div class="support-heart"><svg><use href="#i-heart"></use></svg></div><p class="eyebrow">Gracias por ser parte</p><h2>❤️ Apoya Estudia+</h2><p>Si Estudia+ te ayuda a organizar tus estudios, puedes apoyar este proyecto mediante Yape. Tu apoyo ayudará a seguir mejorando la aplicación.</p>
+      <div class="qr-frame"><img src="assets/images/yape-qr.jpeg" alt="Código QR de Yape para apoyar Estudia+" onerror="this.classList.add('qr-missing');this.alt='Reemplaza assets/images/yape-qr.png con tu código QR de Yape';"></div>
+      <div class="yape-number"><span>Número de Yape</span><strong id="support-yape-number">Configúralo en el código</strong></div>
+      <p class="thanks-message">¡Gracias por apoyar la educación y la tecnología! 💙</p><button class="btn btn-primary full" data-close-modal>Cerrar</button>
+    </div>
+  </dialog>
+
+  <dialog class="modal" id="confirm-modal">
+    <div class="modal-card confirm-card"><div class="confirm-icon"><svg><use href="#i-alert"></use></svg></div><h2 id="confirm-title">¿Estás seguro?</h2><p id="confirm-message">Confirma esta acción.</p><div class="modal-actions"><button class="btn btn-secondary" id="confirm-cancel">Cancelar</button><button class="btn btn-danger" id="confirm-accept">Confirmar</button></div></div>
+  </dialog>
+
+  <aside class="notification-drawer" id="notification-drawer" aria-hidden="true"><div class="drawer-header"><div><p class="eyebrow">Lo que viene</p><h2>Recordatorios</h2></div><button class="modal-close" id="close-notifications" aria-label="Cerrar">×</button></div><div id="drawer-reminders"></div></aside>
+  <div class="toast-region" id="toast-region" aria-live="polite" aria-atomic="true"></div>
+
+  <script src="js/storage.js"></script>
+  <script src="js/courses.js"></script>
+  <script src="js/tasks.js"></script>
+  <script src="js/calendar.js"></script>
+  <script src="js/statistics.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
