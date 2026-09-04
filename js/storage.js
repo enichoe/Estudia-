@@ -59,17 +59,17 @@
 
   function createDefaultData() {
     const courses = [
-      { id: "course-repair", name: "Fundamentos de Diagnóstico y Reparación", color: "#2ee6a6", teacher: "Lic. Diana Torres Cruz", schedule: "Lun y mié · 18:30", description: "Diagnóstico, seguridad y mantenimiento de equipos de cómputo.", weeklyGoal: 4, createdAt: Date.now() - 11000 },
-      { id: "course-web", name: "Programación Web", color: "#4b8dff", teacher: "Ing. Carlos Mendoza", schedule: "Mar y jue · 18:30", description: "Construcción de aplicaciones con HTML, CSS y JavaScript.", weeklyGoal: 5, createdAt: Date.now() - 10000 },
-      { id: "course-networks", name: "Diseño de Redes y Comunicación", color: "#b879ff", teacher: "Ing. Rosa Medina", schedule: "Vie · 18:30", description: "Topologías, direccionamiento y cableado estructurado.", weeklyGoal: 4, createdAt: Date.now() - 9000 },
-      { id: "course-communication", name: "Técnicas de Comunicación", color: "#ff7c91", teacher: "Mauricio Varillas Guzmán", schedule: "Sáb · 08:00", description: "Comunicación oral, escrita y presentaciones efectivas.", weeklyGoal: 2, createdAt: Date.now() - 8000 },
-      { id: "course-algorithms", name: "Algoritmos y Lógica", color: "#ffad4d", teacher: "Ing. Pedro Salas", schedule: "Lun · 20:15", description: "Resolución de problemas y pensamiento computacional.", weeklyGoal: 4, createdAt: Date.now() - 7000 },
-      { id: "course-database", name: "Base de Datos", color: "#2ec8e6", teacher: "Ing. Ana Flores", schedule: "Mié · 20:15", description: "Modelado relacional, consultas y gestión de datos.", weeklyGoal: 4, createdAt: Date.now() - 6000 },
-      { id: "course-os", name: "Sistemas Operativos", color: "#6bd66b", teacher: "Ing. Julio Castro", schedule: "Jue · 20:15", description: "Administración básica de Windows y Linux.", weeklyGoal: 3, createdAt: Date.now() - 5000 },
-      { id: "course-english", name: "Inglés Técnico", color: "#f283c5", teacher: "Lic. María Paredes", schedule: "Mar · 20:15", description: "Vocabulario y comprensión de documentación tecnológica.", weeklyGoal: 2, createdAt: Date.now() - 4000 },
-      { id: "course-office", name: "Herramientas Ofimáticas", color: "#5fbcff", teacher: "Lic. Elena Rojas", schedule: "Sáb · 10:00", description: "Productividad con documentos, hojas de cálculo y presentaciones.", weeklyGoal: 2, createdAt: Date.now() - 3000 },
-      { id: "course-math", name: "Matemática Aplicada", color: "#ff8c52", teacher: "Prof. Víctor León", schedule: "Vie · 20:15", description: "Fundamentos matemáticos aplicados a informática.", weeklyGoal: 3, createdAt: Date.now() - 2000 },
-      { id: "course-project", name: "Proyecto de Innovación", color: "#a1e85a", teacher: "Mg. Patricia Núñez", schedule: "Sáb · 12:00", description: "Diseño y presentación de una solución tecnológica.", weeklyGoal: 4, createdAt: Date.now() - 1000 }
+      { id: "course-repair", name: "Reparación de Equipos de Cómputo", color: "#2ee6a6", teacher: "Lic. Diana Torres Cruz", schedule: "Lun y Jue", description: "Diagnóstico, seguridad y repación de equipos de cómputo.", weeklyGoal: 4, createdAt: Date.now() - 11000 },
+      { id: "course-web", name: "Didáctica en el uso de Recurso Informáticos", color: "#4b8dff", teacher: "Lic. Diana Torres Cruz", schedule: "Jue", description: "", weeklyGoal: 5, createdAt: Date.now() - 10000 },
+      { id: "course-networks", name: "Ofimática", color: "#b879ff", teacher: "Patricia Acuña", schedule: "Jue", description: "", weeklyGoal: 4, createdAt: Date.now() - 9000 },
+      { id: "course-communication", name: "Instalación y con figuración de Redes de Comunicación", color: "#ff7c91", teacher: "Lic. Joaquin Rios", schedule: "Mie", description: "Comunicación oral, escrita y presentaciones efectivas.", weeklyGoal: 2, createdAt: Date.now() - 8000 },
+      { id: "course-algorithms", name: "Cultura Artística", color: "#ffad4d", teacher: "Sanchez", schedule: "Lun", description: "", weeklyGoal: 4, createdAt: Date.now() - 7000 },
+      { id: "course-database", name: "Interpretación y Producción de textos", color: "#2ec8e6", teacher: "Mauricio Varillas Guzmán", schedule: "Mié", description: "", weeklyGoal: 4, createdAt: Date.now() - 6000 },
+      { id: "course-os", name: "Fundamentos de Investigación", color: "#6bd66b", teacher: "Layza", schedule: "Mar", description: "", weeklyGoal: 3, createdAt: Date.now() - 5000 },
+      { id: "course-english", name: "Estadistica General", color: "#f283c5", teacher: "Cruz", schedule: "Mar", description: "", weeklyGoal: 2, createdAt: Date.now() - 4000 },
+      { id: "course-office", name: "Administración de Redes", color: "#5fbcff", teacher: "Ninaja", schedule: "Mar", description: "", weeklyGoal: 2, createdAt: Date.now() - 3000 },
+      { id: "course-math", name: "Herramientas de Gestión de redes de Comunicación", color: "#ff8c52", teacher: "Ing. Nori Bobadilla", schedule: "Vie", description: "", weeklyGoal: 3, createdAt: Date.now() - 2000 },
+      { id: "course-project", name: "Software de Servidores de Red", color: "#a1e85a", teacher: "Ing. Nori Bobadilla", schedule: "Vie", description: "", weeklyGoal: 4, createdAt: Date.now() - 1000 }
     ];
 
     const tasks = [
